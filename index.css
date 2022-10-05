@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+
+    background-image: url("images/Background_three.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+body > div {
+    margin-right: 5vw;
+    margin-left: 5vw;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 90vw;
+    border-radius: 2vh;
+}
