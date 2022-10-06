@@ -4,6 +4,9 @@ body {
     background-image: url("images/Background_three.jpg");
     background-attachment: fixed;
     background-size: cover;
+
+    /*template*/
+    color: white;
 }
 
 body > div {
@@ -13,4 +16,38 @@ body > div {
     background-color: rgba(0, 0, 0, 0.5);
     max-width: 90vw;
     border-radius: 2vh;
+}
+
+body > div > div {
+    font-size: 2vh;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1vh;
+    margin-right: 3vh;
+    margin-left: 3vh;
+}
+
+nav > div {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+    border-radius: 1vh;
+}
+
+nav > div:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.marked {
+    box-shadow: 0 0 10px  white;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid white;
+    color: black;
+}
+header {
+    font-size: 300%;
 }
