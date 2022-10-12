@@ -9,6 +9,7 @@ body {
     color: white;
 }
 
+/*BACK TRANSPARENT*/
 body > div {
     margin: 15vh 5vw 15vh 5vw;
     padding-left: 1vh;
@@ -19,10 +20,15 @@ body > div {
     border-radius: 2vw;
 }
 
+/*FONT ATTRIBUTE*/
 body > div > div {
     font-size: 1vw;
 }
 
+header {
+    font-size: 300%;
+}
+/*NAV START*/
 nav {
     display: flex;
     justify-content: center;
@@ -49,9 +55,7 @@ nav > div:hover {
     border: 1px solid white;
     color: black;
 }
-header {
-    font-size: 300%;
-}
+/*NAV END*/
 
 #give_me_your_shoulders {
     display: grid;
@@ -71,16 +75,50 @@ header {
 
 article {
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5 1fr);
+    padding: 1vw;
 }
 
-.show_hover,
-.show_not_hover {
+/*IMAGES*/
+.cover {
     grid-column: 4 / span 2;
-    grid-row: 1 / span 2;
+    grid-row: 1;
+}
+
+.show_hover {
+    display: none;
 }
 
 img {
-    height: 500px;
-    width: 500px;
+    width: 100%;
+}
+
+/* GRID POSITIONS */
+.song_list {
+    grid-column: 4 / span 2;
+    grid-row: 2;  
+    column-count: 2;
+}
+
+/*
+.bottom_right_90 {
+    grid-column: 5;
+    grid-row: 4;
+}
+
+.top_left_90 {
+    grid-column: 4;
+    grid-row: 4;
+}
+
+.bottom_left_90 {
+    grid-column: 1;
+    grid-row: 4;
+}
+*/
+
+.anecdotes {
+    grid-column: 1 / span 5;
+    grid-row: 4;
+
+    display: flex;
 }
