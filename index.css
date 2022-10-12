@@ -10,16 +10,17 @@ body {
 }
 
 body > div {
-    margin-right: 5vw;
-    margin-left: 5vw;
+    margin: 15vh 5vw 15vh 5vw;
+    padding-left: 1vh;
+    padding-right: 1vh;
 
     background-color: rgba(0, 0, 0, 0.5);
     max-width: 90vw;
-    border-radius: 2vh;
+    border-radius: 2vw;
 }
 
 body > div > div {
-    font-size: 2vh;
+    font-size: 1vw;
 }
 
 nav {
@@ -50,4 +51,36 @@ nav > div:hover {
 }
 header {
     font-size: 300%;
+}
+
+#give_me_your_shoulders {
+    display: grid;
+}
+
+#now_not_yet {
+    display: grid;
+}
+
+.best {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid white;
+    border-radius: 2vw;
+
+    margin: 5vw 2vw;
+}
+
+article {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5 1fr);
+}
+
+.show_hover,
+.show_not_hover {
+    grid-column: 4 / span 2;
+    grid-row: 1 / span 2;
+}
+
+img {
+    height: 500px;
+    width: 500px;
 }
