@@ -33,6 +33,7 @@ body > div > div {
 header {
     font-size: 300%;
 }
+
 /*NAV START*/
 nav {
     display: flex;
@@ -44,14 +45,21 @@ nav {
 
 nav > div {
     background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    font-family: 'Barlow Condensed';
+    font-size: 200%;
+
     padding: 20px;
     text-align: center;
     flex-grow: 1;
     border-radius: 1vh;
 }
 
-nav > div:hover {
+nav > div:nth-child(1):hover,
+nav > div:nth-child(3):hover,
+nav > div:nth-child(4):hover {
     background-color: rgba(0, 0, 0, 0.5);
+    color: white;
 }
 
 .marked {
@@ -121,9 +129,53 @@ img {
 }
 */
 
+.album_data {
+    grid-column: 1 / span 3
+}
+    
 .anecdotes {
     grid-column: 1 / span 5;
-    grid-row: 4;
+    grid-row: 5;
 
     display: flex;
+    justify-content: space-evenly;
+
+    height: 25vh;
+
+    background-color: gray;
+
+    --anecdotes_color: black;
+}
+
+
+.anecdotes li {
+    padding: 10px;
+    list-style: none;
+
+    border: 1px solid white;
+}
+/* BOXES FLEX */
+.top_right_90 {
+    background-color: var(--anecdotes_color);
+}
+
+.bottom_left_90 {
+    background-color: var(--anecdotes_color);
+}
+
+.top_left_90 {
+    background-color: var(--anecdotes_color);
+}
+
+.bottom_right_90 {
+    background-color: var(--anecdotes_color);
+
+    border-radius: 1vh 1vh 0 1vh;
+}
+
+/* HIDDEN BOXES FLEX */
+.empty,
+.tablet_empty,
+.phone_empty {
+    display: none;
 }
