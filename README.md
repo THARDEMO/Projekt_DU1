@@ -1,2 +1,5 @@
 # Projekt_DU1
-Projektet för DU1 - Tema Half•Alive
+Projektet för DU1 - Teo Hardemo
+
+ Tema Half•Alive
+
