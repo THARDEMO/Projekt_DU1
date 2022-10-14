@@ -104,7 +104,31 @@ article {
     margin: 0;
 }
 
+.album_data > div > h2 {
+    font-size: 250%;
+    font-weight: 1000;
+    margin: 0 0 4vw;
+}
+
+.album_data > div:nth-child(2),
+.album_description {
+    font-size: 150%;
+}
+
+.album_data > div:nth-child(2) > ul {
+    list-style: none;
+    margin: 0 0 4vw 0;
+}
+
+.album_data > div:nth-child(2) > p {
+    margin: 0;
+}
+
 /* ALBUM DESCRIPTION_______________________________________ */
+
+.album_description {
+    margin-right: 1vw;
+}
 
 /*IMAGES_______________________________________*/
 .cover {
@@ -165,8 +189,10 @@ img {
     column-count: 2;
 }
 
-.album_data {
-    grid-column: 1 / span 3
+.album_data,
+.album_description {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
 }
     
 .anecdotes {
