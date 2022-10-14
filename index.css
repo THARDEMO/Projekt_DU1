@@ -199,45 +199,113 @@ img {
     grid-column: 1 / span 5;
     grid-row: 5;
 
+    padding-left: 0;
     display: flex;
-    justify-content: space-evenly;
+    gap: 10px;
+    height: 20vw;
 
-    height: 15vw;
-
-    background-color: gray;
+    font-size: 120%;
 
     --anecdotes_color: black;
 }
 
-
 .anecdotes li {
-    padding: 10px;
+    padding: 20px;
     list-style: none;
+}
 
-    border: 1px solid white;
+.top_right_90,
+.bottom_left_90,
+.top_left_90,
+.bottom_right_90 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* BOXES FLEX _______________________________________*/
 .top_right_90 {
     background-color: var(--anecdotes_color);
+    width: 16.5%;
+    border-radius: 4vh 0 4vh 4vh;
 }
 
 .bottom_left_90 {
     background-color: var(--anecdotes_color);
+    border-radius: 4vh 4vh 4vh 0;
 }
 
 .top_left_90 {
     background-color: var(--anecdotes_color);
+    width: 16.5%;
+    border-radius: 0 4vh 4vh 4vh;
 }
 
 .bottom_right_90 {
     background-color: var(--anecdotes_color);
 
-    border-radius: 1vh 1vh 0 1vh;
+    width: 16.5%;
+    border-radius: 4vh 4vh 0 4vh;
+}
+
+.two_wide {
+    width: 33%;
+}
+
+.empty {
+    width: 16.5%;
+}
+/* ANECDOTES COLOR & IMAGES ________________________________________ */
+/* TOP */
+main > article > ul > .top_right_90, 
+main > article > ul > .bottom_left_90,
+main > article > ul > .top_left_90, 
+main > article > ul > .bottom_right_90 {
+    background-color: #ab2644;
+}
+
+main > article > .song_list > div {
+    background-color: #1b1d43;
+}
+
+main > article > ul > .image {
+    background-image: url("images/whatswrong.jpg");
+    background-size: cover;
+    background-position: center;
+}
+/* BOTTOM */
+main > article + article > ul > .top_right_90, 
+main > article + article > ul > .bottom_left_90,
+main > article + article > ul > .top_left_90, 
+main > article + article > ul > .bottom_right_90 {
+    background-color: #d95234;
+}
+
+main > article + article > .song_list > div {
+    background-color: #234934;
+}
+
+main > article > ul > li:nth-child(5) {
+    background-image: url("images/StillFeel.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.image_1 {
+    justify-content: start;
+    align-items: flex-end;
 }
 
 /* HIDDEN BOXES FLEX _______________________________________ */
-.empty,
 .tablet_empty,
 .phone_empty {
     display: none;
+}
+
+/* FOOTER __________________________________________________*/
+footer {
+    font-family: 'Barlow Condensed';
+    margin: 4vh;
+    margin-top: 100px;
+    padding: 10px;
+    font-size: 150%;
 }
