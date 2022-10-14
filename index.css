@@ -1,7 +1,13 @@
 /*FONTS
 font-family: 'Bungee Outline';
 font-family: 'Barlow Condensed';
+font-family: 'Gloria Hallelujah', cursive;
 */
+
+:root {
+    --font_sizes_desktop: 1vw;
+} 
+
 
 body {
     margin: 0;
@@ -10,11 +16,11 @@ body {
     background-attachment: fixed;
     background-size: cover;
 
-    /*template*/
+    /*template_______________________________________*/
     color: white;
 }
 
-/*BACK TRANSPARENT*/
+/*BACK TRANSPARENT _______________________________________*/
 body > div {
     margin: 15vh 5vw 15vh 5vw;
     padding-left: 1vh;
@@ -25,16 +31,18 @@ body > div {
     border-radius: 2vw;
 }
 
-/*FONT ATTRIBUTE*/
+/*FONT ATTRIBUTE_______________________________________*/
 body > div > div {
-    font-size: 1vw;
+    font-size: var(--font_sizes_desktop);
 }
 
 header {
     font-size: 300%;
-}
+    padding-left: 15px;
+    font-family: 'Gloria Hallelujah', cursive; 
+    }
 
-/*NAV START*/
+/*NAV START_______________________________________*/
 nav {
     display: flex;
     justify-content: center;
@@ -68,12 +76,9 @@ nav > div:nth-child(4):hover {
     border: 1px solid white;
     color: black;
 }
-/*NAV END*/
+/*NAV END_______________________________________*/
 
-#give_me_your_shoulders {
-    display: grid;
-}
-
+#give_me_your_shoulders, 
 #now_not_yet {
     display: grid;
 }
@@ -89,45 +94,76 @@ nav > div:nth-child(4):hover {
 article {
     grid-template-columns: repeat(5, 1fr);
     padding: 1vw;
+
+    font-family: 'Barlow Condensed';
+}
+/* ALBUM DATA _______________________________________ */
+.album_data > div > h1 {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 250%;
+    margin: 0;
 }
 
-/*IMAGES*/
+/* ALBUM DESCRIPTION_______________________________________ */
+
+/*IMAGES_______________________________________*/
 .cover {
     grid-column: 4 / span 2;
     grid-row: 1;
+    position: relative;
+}
+
+.cover > img {
+    border-radius: 1vw 1vw 0 0;
+    margin-bottom: 10px;
+}
+
+/* HOVER ATTRIBUTES ON IMG _______________________________________*/
+.show_not_hover {
+    transition-property: opacity;
+    transition-duration: 1s;
+    position: relative;
+}
+.show_not_hover:hover {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1s;
 }
 
 .show_hover {
-    display: none;
+    position: absolute;
+    right: 0;
 }
 
 img {
     width: 100%;
 }
+/* SONG LIST _______________________________________*/
+.song_list > div {
+    background-color: #000000;
+    height: 15vw;
+    border-radius: 0 0 1vw 1vw;
+    padding: 10px 10px 10px 1.5vw;
 
-/* GRID POSITIONS */
+    display: flex;
+    flex-direction: column;
+}
+
+.song_list > div > ul {
+    margin: 5px 0 0 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.song_list > div > h2 {
+    margin-bottom: 0;
+}
+/* GRID POSITIONS _______________________________________*/
 .song_list {
     grid-column: 4 / span 2;
     grid-row: 2;  
     column-count: 2;
 }
-
-/*
-.bottom_right_90 {
-    grid-column: 5;
-    grid-row: 4;
-}
-
-.top_left_90 {
-    grid-column: 4;
-    grid-row: 4;
-}
-
-.bottom_left_90 {
-    grid-column: 1;
-    grid-row: 4;
-}
-*/
 
 .album_data {
     grid-column: 1 / span 3
@@ -140,7 +176,7 @@ img {
     display: flex;
     justify-content: space-evenly;
 
-    height: 25vh;
+    height: 15vw;
 
     background-color: gray;
 
@@ -154,7 +190,7 @@ img {
 
     border: 1px solid white;
 }
-/* BOXES FLEX */
+/* BOXES FLEX _______________________________________*/
 .top_right_90 {
     background-color: var(--anecdotes_color);
 }
@@ -173,7 +209,7 @@ img {
     border-radius: 1vh 1vh 0 1vh;
 }
 
-/* HIDDEN BOXES FLEX */
+/* HIDDEN BOXES FLEX _______________________________________ */
 .empty,
 .tablet_empty,
 .phone_empty {
