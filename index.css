@@ -5,11 +5,7 @@ font-family: 'Gloria Hallelujah', cursive;
 */
 
 :root {
-    --font_sizes_desktop: 1.5vw;
-    --font_toph1: 66.6px;
-    --font_nav: 22.2px;
-    --font_content: 16.65px;
-    --font_albumh1: 27.75px;
+    --font_sizes_desktop: 1vw;
 } 
 
 
@@ -59,7 +55,7 @@ nav > div {
     background-color: rgba(255, 255, 255, 0.5);
     color: black;
     font-family: 'Barlow Condensed';
-    font-size: 200%;
+    /* font-size: 200%; */
 
     padding: 20px;
     text-align: center;
@@ -330,45 +326,100 @@ footer {
 }
 
 /* MEDIA QUARIES DESKTOP _____________________________________ */
-@media (min-width 1111px) {
+/* ANVÄND CALC */
+/* @media (min-width: 1111px) {
+    
     header {
-        font-size: var(--font_toph1);
+        font-size: calc(3 * var(--font_sizes_desktop));
     }
     
     nav {
-        font-size: var(--font_nav);
+        font-size: calc(2 * var(--font_sizes_desktop));
     }
 
-    
-    .album_data
-    
+    .album_data {
+        font-size: calc(2 * var(--font_sizes_desktop));
+    }
+
     .album_data > div:nth-child(2),
-    .album_description {
-        font-size: var(--font_content);
-    }
-    .anecdotes {
-        /* font-size: var(--font_content); */
-        font-size: 300px;
-    }
-
+    .album_description,
     footer {
-        font-size: var(--font_content);
+        font-size: calc(1.7 * var(--font_sizes_desktop));
     }
-}
 
-@media {
+    .song_list {
+        font-size: calc(1.3 * var(--font_sizes_desktop));
+    }
+    
+    .anecdotes {
+        font-size: calc(1.2 * var(--font_sizes_desktop));
+    }
+  
+}  */
+
+/* @media (min-width: 900px) and (max-width: 1111px) { */
+
     body > div > div {
         font-size: var(--font_sizes_desktop);
     }
-}
+    
+    header {
+        font-size: calc(3 * var(--font_sizes_desktop));
+    }
+    
+    nav {
+        font-size: calc(2 * var(--font_sizes_desktop));
+    }
 
-/* --font_sizes_desktop: 1vw;
---font_toph1: 66.6px;
---font_nav: 22.2px;
---font_content: 16.65px;
---font_albumh1: 27.75px; */
+    .album_data {
+        font-size: calc(2 * var(--font_sizes_desktop));
+    }
+
+    .album_data > div:nth-child(2),
+    .album_description,
+    footer {
+        font-size: calc(1.7 * var(--font_sizes_desktop));
+    }
+
+    .song_list {
+        font-size: calc(1.3 * var(--font_sizes_desktop));
+    }
+    
+    .anecdotes {
+        font-size: calc(1.2 * var(--font_sizes_desktop));
+    }
+/* } */
+
 
 /* MEDIA QUARIES TABLET _____________________________________ */
+@media (max-width: 800px) {
 
+    header {
+        text-align: center;
+    }
 
-/* MEDIA QUARIES PHONE _____________________________________ */
+    article {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .cover {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+    }
+
+    .song_list {
+        grid-column: 3;
+        grid-row: 1;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .album_data,
+    .album_description {
+        grid-column: 1 / span 3;
+        grid-row: 2 / span 2;
+    }
+}
+
+/* MEDIA QUARIES PHONE _____________________________________ */ 
