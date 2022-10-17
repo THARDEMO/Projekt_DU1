@@ -5,7 +5,11 @@ font-family: 'Gloria Hallelujah', cursive;
 */
 
 :root {
-    --font_sizes_desktop: 1vw;
+    --font_sizes_desktop: 1.5vw;
+    --font_toph1: 66.6px;
+    --font_nav: 22.2px;
+    --font_content: 16.65px;
+    --font_albumh1: 27.75px;
 } 
 
 
@@ -32,12 +36,12 @@ body > div {
 }
 
 /*FONT ATTRIBUTE_______________________________________*/
-body > div > div {
+/* body > div > div {
     font-size: var(--font_sizes_desktop);
-}
+} */
 
 header {
-    font-size: 300%;
+    /* font-size: 300%; */
     padding-left: 15px;
     font-family: 'Gloria Hallelujah', cursive; 
     }
@@ -46,9 +50,9 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    gap: 1vh;
-    margin-right: 3vh;
-    margin-left: 3vh;
+    gap: 1vw;
+    margin-right: 3vw;
+    margin-left: 3vw;
 }
 
 nav > div {
@@ -60,7 +64,7 @@ nav > div {
     padding: 20px;
     text-align: center;
     flex-grow: 1;
-    border-radius: 1vh;
+    border-radius: 1vw;
 }
 
 nav > div:nth-child(1):hover,
@@ -97,23 +101,46 @@ article {
 
     font-family: 'Barlow Condensed';
 }
+
+/* NR 1 ALBUM - NOW NOT YET ___________________________ */
+#now_not_yet {
+    position: relative;
+}
+#now_not_yet > .album_data > div > h1::before {
+    background-image: url('images/number-1-icon.png');
+    background-size: 100%;
+    display: inline-block;
+    width: 5vw; 
+    height: 5vw;
+    content:"";
+
+    position: absolute;
+    left: -15px;
+    top: -15px;
+}
+
+
 /* ALBUM DATA _______________________________________ */
+.album_data {
+    padding: 10px;
+}
+
 .album_data > div > h1 {
     font-family: 'Gloria Hallelujah', cursive;
-    font-size: 250%;
+    /* font-size: 250%; */
     margin: 0;
 }
 
 .album_data > div > h2 {
-    font-size: 250%;
+    /* font-size: 250%; */
     font-weight: 1000;
     margin: 0 0 4vw;
 }
 
-.album_data > div:nth-child(2),
+/* .album_data > div:nth-child(2),
 .album_description {
     font-size: 150%;
-}
+} */
 
 .album_data > div:nth-child(2) > ul {
     list-style: none;
@@ -164,7 +191,6 @@ img {
 }
 /* SONG LIST _______________________________________*/
 .song_list > div {
-    background-color: #000000;
     height: 15vw;
     border-radius: 0 0 1vw 1vw;
     padding: 10px 10px 10px 1.5vw;
@@ -204,9 +230,7 @@ img {
     gap: 10px;
     height: 20vw;
 
-    font-size: 120%;
-
-    --anecdotes_color: black;
+    /* font-size: 120%; */
 }
 
 .anecdotes li {
@@ -224,25 +248,20 @@ img {
 }
 /* BOXES FLEX _______________________________________*/
 .top_right_90 {
-    background-color: var(--anecdotes_color);
     width: 16.5%;
     border-radius: 4vh 0 4vh 4vh;
 }
 
 .bottom_left_90 {
-    background-color: var(--anecdotes_color);
     border-radius: 4vh 4vh 4vh 0;
 }
 
 .top_left_90 {
-    background-color: var(--anecdotes_color);
     width: 16.5%;
     border-radius: 0 4vh 4vh 4vh;
 }
 
 .bottom_right_90 {
-    background-color: var(--anecdotes_color);
-
     width: 16.5%;
     border-radius: 4vh 4vh 0 4vh;
 }
@@ -307,5 +326,49 @@ footer {
     margin: 4vh;
     margin-top: 100px;
     padding: 10px;
-    font-size: 150%;
+    /* font-size: 150%; */
 }
+
+/* MEDIA QUARIES DESKTOP _____________________________________ */
+@media (min-width 1111px) {
+    header {
+        font-size: var(--font_toph1);
+    }
+    
+    nav {
+        font-size: var(--font_nav);
+    }
+
+    
+    .album_data
+    
+    .album_data > div:nth-child(2),
+    .album_description {
+        font-size: var(--font_content);
+    }
+    .anecdotes {
+        /* font-size: var(--font_content); */
+        font-size: 300px;
+    }
+
+    footer {
+        font-size: var(--font_content);
+    }
+}
+
+@media {
+    body > div > div {
+        font-size: var(--font_sizes_desktop);
+    }
+}
+
+/* --font_sizes_desktop: 1vw;
+--font_toph1: 66.6px;
+--font_nav: 22.2px;
+--font_content: 16.65px;
+--font_albumh1: 27.75px; */
+
+/* MEDIA QUARIES TABLET _____________________________________ */
+
+
+/* MEDIA QUARIES PHONE _____________________________________ */
