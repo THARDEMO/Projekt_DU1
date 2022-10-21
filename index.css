@@ -99,7 +99,24 @@ article {
 }
 
 /* NR 1 ALBUM - NOW NOT YET ___________________________ */
-#now_not_yet {
+/* #now_not_yet {
+    position: relative;
+} 
+#now_not_yet > .album_data::before {
+    background-image: url('images/number-1-icon.png');
+    background-size: 100%;
+    display: inline-block;
+    width: 5vw; 
+    height: 5vw;
+    content:"";
+
+    position: absolute;
+    z-index: 2;
+    left: -20px;
+    top: -10px;
+} */
+
+#now_not_yet > .album_data > div {
     position: relative;
 }
 #now_not_yet > .album_data > div > h1::before {
@@ -111,10 +128,9 @@ article {
     content:"";
 
     position: absolute;
-    left: -15px;
-    top: -15px;
+    top: -10px;
+    left: -30px;
 }
-
 
 /* ALBUM DATA _______________________________________ */
 .album_data {
@@ -319,9 +335,9 @@ main > article > ul > li:nth-child(5) {
 /* FOOTER __________________________________________________*/
 footer {
     font-family: 'Barlow Condensed';
-    margin: 4vh;
     margin-top: 100px;
     padding: 10px;
+
     /* font-size: 150%; */
 }
 
@@ -454,11 +470,24 @@ footer {
         grid-row: 2 / span 2;
     }
 
-    /* #now_not_yet > .album_data > div > h1::before {
-        top: 450px;
-        left: 0;
-    } */
+    /* #now_not_yet > .album_data:before {
+        display: none;
+    } 
+    #now_not_yet > .album_data > div {
+        position: relative;
+    }
+    #now_not_yet > .album_data > div > h1::before {
+        background-image: url('images/number-1-icon.png');
+        background-size: 100%;
+        display: inline-block;
+        width: 5vw; 
+        height: 5vw;
+        content:"";
 
+        position: absolute;
+        top: -10px;
+        left: -15px;
+    } */
     /* FONTS SIZES */    
     header {
         font-size: calc(5.5 * var(--font_sizes_desktop));
