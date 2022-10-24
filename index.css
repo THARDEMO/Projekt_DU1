@@ -8,7 +8,6 @@ font-family: 'Gloria Hallelujah', cursive;
     --font_sizes_desktop: 1vw;
 } 
 
-
 body {
     margin: 0;
 
@@ -303,7 +302,6 @@ main > article + article > ul > li:nth-child(5) {
     align-items: flex-end;
 }
 
-
 /* FOOTER __________________________________________________*/
 footer {
     margin-top: 100px;
@@ -313,7 +311,6 @@ footer {
 }
 
 /* MEDIA QUARIES DESKTOP _____________________________________ */
-/* ANVÄND CALC */
 @media (min-width: 1111px) {
     
     header {
@@ -371,7 +368,11 @@ footer {
         font-size: calc(1.7 * var(--font_sizes_desktop));
     }
 
-    .song_list {
+    .song_list h2 {
+        font-size: calc(1.8 * var(--font_sizes_desktop));
+    }
+
+    .song_list li {
         font-size: calc(1.2 * var(--font_sizes_desktop));
     }
     
@@ -411,8 +412,6 @@ footer {
         font-size: calc(1vw - var(--font_sizes_desktop) + 12px);
     }
 }
-
-
 /* MEDIA QUARIES TABLET _____________________________________ */
 @media (max-width: 800px) {
 
@@ -499,7 +498,11 @@ footer {
         font-size: calc(2.5 * var(--font_sizes_desktop));
     }
 
-    .song_list {
+    .song_list h2 {
+        font-size: calc(3 * var(--font_sizes_desktop));
+    }
+
+    .song_list li {
         font-size: calc(2.3 * var(--font_sizes_desktop));
     }
     
@@ -553,10 +556,9 @@ footer {
         display: block;
         width: 23%;
     }
-
 }
-/* MEDIA QUARIES PHONE _____________________________________ */ 
 
+/* MEDIA QUARIES PHONE _____________________________________ */ 
 @media (max-width: 500px) {
     body > div {
         margin: 0 0 0 0;
@@ -643,7 +645,7 @@ footer {
     }
     
     .two_wide {
-        width: 62%;
+        width: 64%;
     }
     
     .empty {
@@ -658,7 +660,6 @@ footer {
     .tablet_empty {
         display: none;
     }
-
 
     /* FONTS SIZES */    
     header {
@@ -679,7 +680,11 @@ footer {
         font-size: calc(3.5 * var(--font_sizes_desktop));
     }
 
-    .song_list {
+    .song_list h2 {
+        font-size: calc(3.8 * var(--font_sizes_desktop));
+    }
+
+    .song_list li {
         font-size: calc(3.3 * var(--font_sizes_desktop));
     }
     
