@@ -16,7 +16,6 @@ body {
     background-attachment: fixed;
     background-size: cover;
 
-    /*template_______________________________________*/
     color: white;
 }
 
@@ -31,16 +30,11 @@ body > div {
     border-radius: 2vw;
 }
 
-/*FONT ATTRIBUTE_______________________________________*/
-/* body > div > div {
-    font-size: var(--font_sizes_desktop);
-} */
 
 header {
-    /* font-size: 300%; */
     padding-left: 15px;
     font-family: 'Gloria Hallelujah', cursive; 
-    }
+}
 
 /*NAV START_______________________________________*/
 nav {
@@ -55,12 +49,11 @@ nav > div {
     background-color: rgba(255, 255, 255, 0.5);
     color: black;
     font-family: 'Barlow Condensed';
-    /* font-size: 200%; */
 
     padding: 20px;
+    border-radius: 1vw;
     text-align: center;
     flex-grow: 1;
-    border-radius: 1vw;
 }
 
 nav > div:nth-child(1):hover,
@@ -71,10 +64,10 @@ nav > div:nth-child(4):hover {
 }
 
 .marked {
-    box-shadow: 0 0 10px  white;
     background-color: rgba(255, 255, 255, 0.5);
-    border: 1px solid white;
     color: black;
+    border: 1px solid white;
+    box-shadow: 0 0 10px white;
 }
 /*NAV END_______________________________________*/
 
@@ -102,6 +95,7 @@ article {
 #now_not_yet > .album_data > div {
     position: relative;
 }
+
 #now_not_yet > .album_data > div > h1::before {
     background-image: url('images/number-1-icon.png');
     background-size: 100%;
@@ -111,7 +105,7 @@ article {
     content:"";
 
     position: absolute;
-    top: -10px;
+    top: -30px;
     left: -30px;
 }
 
@@ -122,20 +116,13 @@ article {
 
 .album_data > div > h1 {
     font-family: 'Gloria Hallelujah', cursive;
-    /* font-size: 250%; */
     margin: 0;
 }
 
 .album_data > div > h2 {
-    /* font-size: 250%; */
     font-weight: 1000;
     margin: 0 0 4vw;
 }
-
-/* .album_data > div:nth-child(2),
-.album_description {
-    font-size: 150%;
-} */
 
 .album_data > div:nth-child(2) > ul {
     list-style: none;
@@ -156,6 +143,7 @@ article {
 .cover {
     grid-column: 4 / span 2;
     grid-row: 1;
+
     position: relative;
 }
 
@@ -167,6 +155,7 @@ article {
 .show_not_hover {
     transition-property: opacity;
     transition-duration: 1s;
+
     position: relative;
 }
 .show_not_hover:hover {
@@ -222,14 +211,13 @@ img {
     padding-left: 0;
     display: flex;
     gap: 10px;
-    /* height: 20vw; */
-
-    /* font-size: 120%; */
 }
 
 .anecdotes li {
     padding: 15px;
     list-style: none;
+
+    height: 20vw;
 }
 
 .top_right_90,
@@ -302,7 +290,7 @@ main > article + article > .song_list > div {
     background-color: #234934;
 }
 
-main > article > ul > li:nth-child(5) {
+main > article + article > ul > li:nth-child(5) {
     background-image: url("images/StillFeel.jpg");
     background-size: cover;
     background-position: center;
@@ -316,11 +304,10 @@ main > article > ul > li:nth-child(5) {
 
 /* FOOTER __________________________________________________*/
 footer {
-    font-family: 'Barlow Condensed';
     margin-top: 100px;
     padding: 10px;
 
-    /* font-size: 150%; */
+    font-family: 'Barlow Condensed';
 }
 
 /* MEDIA QUARIES DESKTOP _____________________________________ */
@@ -384,7 +371,7 @@ footer {
     }
     
     .anecdotes {
-        font-size: calc(1.2 * var(--font_sizes_desktop));
+        font-size: calc(1.4 * var(--font_sizes_desktop));
     }
 /* } */
 
@@ -400,8 +387,13 @@ footer {
         grid-template-columns: repeat(3, 1fr);
     }
     
+    #now_not_yet > .album_data > div > h1::before {
+        top: 0;
+        left: -20px;
+    }
+
     .cover > img {
-        border-radius: 3vw 0 0 0;
+        border-radius: 3vw 0 0 3vw;
     }
 
     .cover {
@@ -409,7 +401,6 @@ footer {
         grid-row: 1;
 
         background-color: #1b1d43;
-
         border-radius: 3vw 0 0 3vw;
     }
 
@@ -433,7 +424,7 @@ footer {
     .show_not_hover:hover {
         opacity: 1;
     }
-
+    
     .song_list {
         grid-column: 3;
         grid-row: 1;
@@ -476,7 +467,7 @@ footer {
     }
     
     .anecdotes {
-        font-size: calc(1.9 * var(--font_sizes_desktop));
+        font-size: calc(2.3 * var(--font_sizes_desktop));
     }
     
     /* ANECDOTES ORDER ________________________________ */
@@ -487,7 +478,7 @@ footer {
 
     .anecdotes li {
         padding: 4px;
-        height: 20vw;
+        height: 35vw;
     }
     
     .top_right_90 {
@@ -537,6 +528,14 @@ footer {
         padding-top: 1px;
     }
 
+    #now_not_yet > .album_data > div > h1::before {
+        top: -5px;
+        left: -20px;
+
+        height: 7vw;
+        width: 7vw;
+    }
+
     .cover {
         grid-column: 1 / span 3;
         grid-row: 1;
@@ -583,8 +582,8 @@ footer {
 
     /* ANECDOTES ___________________________ */
     .anecdotes li {
+        height: 40vw;
         padding: 4px;
-        height: 35vw;
     }
     
     .top_right_90 {
@@ -615,11 +614,39 @@ footer {
     }
     
     .phone_empty {
-        display: block;
         width: 30%;
+        display: block;
     }
     
     .tablet_empty {
         display: none;
+    }
+
+
+    /* FONTS SIZES */    
+    header {
+        font-size: calc(6.5 * var(--font_sizes_desktop));
+    }
+    
+    nav {
+        font-size: calc(4 * var(--font_sizes_desktop));
+    }
+
+    .album_data {
+        font-size: calc(4 * var(--font_sizes_desktop));
+    }
+
+    .album_data > div:nth-child(2),
+    .album_description,
+    footer {
+        font-size: calc(3.5 * var(--font_sizes_desktop));
+    }
+
+    .song_list {
+        font-size: calc(3.3 * var(--font_sizes_desktop));
+    }
+    
+    .anecdotes {
+        font-size: calc(2.9 * var(--font_sizes_desktop));
     }
 }
